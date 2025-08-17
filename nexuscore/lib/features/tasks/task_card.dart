@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../app/theme.dart';
 import 'task.dart';
-import '../components/glass_card.dart';
+import '../../ui/components/glass_card.dart';
 
 class TaskCard extends StatelessWidget {
   final Task task;
@@ -53,7 +53,10 @@ class _PriorityIndicator extends StatelessWidget {
         color: colors[priority],
         shape: BoxShape.circle,
         boxShadow: [
-          BoxShadow(color: colors[priority]!.withOpacity(0.7), blurRadius: 8)
+          BoxShadow(
+            color: colors[priority]!.withOpacity(0.7),
+            blurRadius: 8,
+          )
         ]
       ),
     );

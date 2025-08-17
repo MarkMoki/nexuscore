@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import '../../features/tasks/task.dart';
-import '../../features/tasks/tasks_provider.dart';
-import '../../utils/date_utils.dart';
-import '../components/glass_card.dart';
+import 'package:nexusc0re/app/theme.dart';
+import 'package:nexusc0re/features/tasks/task.dart';
+import 'package:nexusc0re/features/tasks/tasks_provider.dart';
+import 'package:nexusc0re/ui/components/glass_card.dart';
+import 'package:nexusc0re/utils/date_utils.dart';
 
 class CalendarScreen extends ConsumerWidget {
   const CalendarScreen({super.key});
@@ -21,29 +22,27 @@ class CalendarScreen extends ConsumerWidget {
   }
 
   Widget _buildCalendarHeader() {
-    return GlassCard(
-      margin: EdgeInsets.zero,
-      borderRadius: 0,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.white24)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.chevron_left, color: Colors.white70),
-              onPressed: () {},
-            ),
-            Text(
-              DateFormat('MMMM yyyy').format(DateTime.now()),
-              style: const TextStyle(color: Colors.white, fontSize: 18)),
-            IconButton(
-              icon: const Icon(Icons.chevron_right, color: Colors.white70),
-              onPressed: () {},
-            ),
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      decoration: const BoxDecoration(
+        border: Border(bottom: BorderSide(color: Colors.white24)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.chevron_left, color: Colors.white70),
+            onPressed: () {},
+          ),
+          Text(
+            DateFormat('MMMM yyyy').format(DateTime.now()),
+            style: const TextStyle(color: Colors.white, fontSize: 18),
+          ),
+          IconButton(
+            icon: const Icon(Icons.chevron_right, color: Colors.white70),
+            onPressed: () {},
+          ),
+        ],
       ),
     );
   }

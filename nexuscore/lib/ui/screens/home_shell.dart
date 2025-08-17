@@ -6,6 +6,7 @@ import '../tabs/notes_screen.dart';
 import '../tabs/backup_screen.dart';
 import '../../features/tasks/task_creation_screen.dart';
 import '../../features/notes/note_editor_screen.dart';
+import '../../app/theme.dart';
 
 class HomeShell extends ConsumerStatefulWidget {
   const HomeShell({super.key});
@@ -64,14 +65,14 @@ class _HomeShellState extends ConsumerState<HomeShell> with TickerProviderStateM
     switch (_tabController.index) {
       case 0: // Tasks
         return FloatingActionButton(
-          onPressed: () => _createNewTask(),
+          onPressed: _createNewTask,
           backgroundColor: AppColors.accent,
           foregroundColor: Colors.black,
           child: const Icon(Icons.add_task),
         );
       case 2: // Notes
         return FloatingActionButton(
-          onPressed: () => _createNewNote(),
+          onPressed: _createNewNote,
           backgroundColor: AppColors.accent,
           foregroundColor: Colors.black,
           child: const Icon(Icons.note_add),

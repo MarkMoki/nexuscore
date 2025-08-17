@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 
-class NotesScreen extends StatelessWidget {
-  const NotesScreen({super.key});
+class BackupScreen extends StatelessWidget {
+  const BackupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Notes Screen'));
-  }
-}import 'package:flutter/material.dart';
-
-class NotesScreen extends StatelessWidget {
-  const NotesScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('Notes Screen'));
+    return const Center(child: Text('Backup Screen'));
   }
 }
